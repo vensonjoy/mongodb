@@ -37,7 +37,7 @@ when "debian"
 when "rhel","fedora"
   yum_repository "10gen" do
     description "10gen RPM Repository"
-    url "http://downloads-distro.mongodb.org/repo/redhat/os/#{node['kernel']['machine']  =~ /x86_64/ ? 'x86_64' : 'i686'}"
+    url "https://repo.mongodb.org/yum/redhat/mongodb-org-3.1.repo#{node['kernel']['machine']  =~ /x86_64/ ? 'x86_64' : 'i686'}"
     action :add
   end
 
